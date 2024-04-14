@@ -12,7 +12,7 @@ This app is a mock of SIM PRS system. A student can register to a list of classe
     - This route retrieves all the existing classes and students
     - This route has no body/param inputs
 - POST "/register"
-    - This route sends a job consisting of `classes` and `student` for rabbitMQ to insert to Database
+    - This route sends a job consisting of `classes` and `student` for rabbitMQ to insert to Database. The payload is in the form of bytes of stringified JSON, the consumer should properly parse this data.
     - Body (expects JSON):
     ```
     {
